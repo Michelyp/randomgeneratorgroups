@@ -1,5 +1,5 @@
 <template>
-  <h1>Grupo</h1>
+  <h1>Grupos</h1>
 </template>
 
 <script>
