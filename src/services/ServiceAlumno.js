@@ -2,7 +2,7 @@ import Global from './../Global';
 import axios from 'axios';
 
 export default class ServiceAlumno {
-    getCoches() {
+    getAlumnos() {
         return new Promise(function(resolve){
             var request = "api/alumnos";
             var url = Global.urlApiAlumnos + request;

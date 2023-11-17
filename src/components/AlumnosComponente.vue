@@ -1,9 +1,9 @@
 <template>
   <div id="Lista-Alumnos">
     <ul>
-      <li v-for="alumno in alumnos">
+      <!-- <li v-for="alumno in alumnos">
 
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>

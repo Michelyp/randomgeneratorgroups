@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld/>
+      <WindowComponent/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WindowComponent from './components/WindowComponent.vue'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    WindowComponent,
   },
 
   data: () => ({
