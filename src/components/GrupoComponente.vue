@@ -18,16 +18,18 @@
 <script>
 export default {
   name: "GrupoComponent",
-  props:["alumnos","index"],
+  props:["alumno_elegido","index"],
   data() {
     return {
-/*       alumnos: null,
-      index:null */
+      alumnos : []
     };
   },
   mounted() {
-    console.log("Montado");
+    console.log("Montado");    
   },
+  updated(){
+    this.alumnos.push(this.alumno_elegido);
+  }
 };
 </script>
 
