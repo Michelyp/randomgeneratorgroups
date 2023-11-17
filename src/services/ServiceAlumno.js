@@ -4,7 +4,7 @@ import axios from 'axios';
 export default class ServiceAlumno {
     getAlumnos() {
         return new Promise(function(resolve){
-            var request = "api/alumnos";
+            var request = "api/alumnos/filtrarcurso/"+2023;
             var url = Global.urlApiAlumnos + request;
             var alumnos = [];
             axios.get(url).then(response => {
