@@ -7,7 +7,7 @@
   
   <div class="col-8 float-end" v-if="alumnos.length != 0">
     <div v-for="(i,grupo) in grupos" :key="grupo">
-    <GrupoComponente :alumnos="this.alumnos" :index="i" ></GrupoComponente>
+      <GrupoComponente :alumnos="this.alumnos" :index="i" ></GrupoComponente>
    </div>
   </div>
 </div>
