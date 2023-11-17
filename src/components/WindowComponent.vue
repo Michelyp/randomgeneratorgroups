@@ -79,3 +79,13 @@ export default {
 
 <style>
 </style>
+
+/* Generar PDF
+import html2pdf from "html2pdf.js";
+export default {
+methods:{
+  var element = document.getElementById("element-to-pdf");
+  html2pdf(element);
+}
+
+ */
