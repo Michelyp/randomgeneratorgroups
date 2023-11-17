@@ -9,6 +9,7 @@ export default class ServiceAlumno {
             var alumnos = [];
             axios.get(url).then(response => {
                 alumnos = response.data;
+                console.log(alumnos)
                 resolve(alumnos);
             })
         })

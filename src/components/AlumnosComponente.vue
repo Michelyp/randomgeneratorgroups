@@ -1,21 +1,18 @@
 <template>
-  <div id="Lista-Alumnos">
-    <ul>
-      <!-- <li v-for="alumno in alumnos">
-
-      </li> -->
-    </ul>
-  </div>
+ <v-container>
+    <v-row align="center" justify="center"
+        v-for="(alumno, i) in alumnos"
+        :key="i"
+      >
+      {{ alumno.nombre }} {{alumno.apellidos}}
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
   name:'AlumnosComponent',
-    props: ['alumnos'],
-    methods: {
-        Generar_Grupos(){                    
-        }
-    }
+    props: ['alumnos']
 }
 </script>
 
