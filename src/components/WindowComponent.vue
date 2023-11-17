@@ -5,7 +5,7 @@
     <button class="btn btn-info">Generar grupos</button>
   </div>
   
-  <div class="col-8 float-end">
+  <div class="col-8 float-end" v-if="alumnos.length != 0">
     <div v-for="(i,grupo) in grupos" :key="grupo">
     <GrupoComponente :alumnos="this.alumnos" :index="i" ></GrupoComponente>
    </div>
@@ -20,13 +20,13 @@
 <script>
     import ServiceAlumno from '@/services/ServiceAlumno';
     import AlumnosComponente from './AlumnosComponente.vue';
-/*     import GrupoComponente from './GrupoComponente.vue';
- */
+    import GrupoComponente from './GrupoComponente.vue';
+
 const service = new ServiceAlumno();
 export default {
     components:{
         AlumnosComponente,
-        /* GrupoComponente */
+        GrupoComponente
     },
     data() {
         return {
@@ -42,11 +42,12 @@ export default {
         Load_Alumnos(){
             this.alumnos = service.getAlumnos().then(response=>{
                 this.alumnos = response
-            })
-            console.log(this.alumnos)
+                this.Create_Grupos();
+            })      
         },
         Create_Grupos(){
-          if(this.alumnos.length %3 == 0){
+          
+          if(this.alumnos.length%3 == 0){
             this.grupos = parseInt(this.alumnos.length / 3);
             this.statusImpar = false
           }else{
